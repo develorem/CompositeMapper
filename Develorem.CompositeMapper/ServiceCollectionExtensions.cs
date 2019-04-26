@@ -30,7 +30,7 @@ namespace Develorem.CompositeMapping
 
             foreach (var type in types)
             {
-                services.AddSingleton(type, type);
+                services.AddSingleton(type.BaseType, type);
             }
 
         }

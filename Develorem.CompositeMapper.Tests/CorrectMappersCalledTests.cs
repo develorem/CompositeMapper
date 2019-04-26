@@ -11,13 +11,8 @@ using System.Linq;
 namespace Develorem.CompositeMapper.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class CorrectMappersCalledTests
     {
-        private IServiceProvider GetProvider()
-        {
-            return null;
-        }
-
         [TestMethod]
         public void EnsureAutoMapperWorksAlone()
         {
@@ -35,10 +30,29 @@ namespace Develorem.CompositeMapper.Tests
 
             var autoMapper = provider.GetService<IAutoMapper>() as DoNothingAutoMapper;
             autoMapper.NumberTimesCalled.ShouldBe(1);
-
-            //novel.Name.ShouldBe("Bored of the Rings");
-            //novel.Authors.Count().ShouldBe(1);
-            //novel.Authors.First().ShouldBe("JRT Token");
         }
+
+        [TestMethod]
+        public void EnsureExplicitMapperCalledAndNotTheAutoMapper()
+        {
+            var services = new ServiceCollection() as IServiceCollection;
+            services.RegisterCompositeAutoMapper<DoNothingAutoMapper>(typeof(BookNovelMap).Assembly);
+            services.AddSingleton<Harness>();            
+            var provider = services.BuildServiceProvider();
+
+            var harness = provider.GetRequiredService<Harness>();
+
+            var book = new Book { Name = "Bored of the Rings", Authors = new[] { "JRT Token" } };
+            var novel = new Novel();
+
+            harness.TestMap(book, novel);
+
+            var explicitMapper = provider.GetRequiredService<ExplicitMapper<Book, Novel>>() as BookNovelMap;
+            explicitMapper.NumberTimesCalled.ShouldBe(1);
+
+            var autoMapper = provider.GetService<IAutoMapper>() as DoNothingAutoMapper;
+            autoMapper.NumberTimesCalled.ShouldBe(0);
+        }
+
     }
 }

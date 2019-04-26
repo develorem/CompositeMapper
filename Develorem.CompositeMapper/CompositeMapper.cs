@@ -3,6 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Develorem.CompositeMapping
 {
+    /// <summary>
+    /// This class is the gateway for all mapping. 
+    /// When requested to map, it first checks for an explicit mapper for the given types, and if not found, defers to the auto mapper configured.
+    /// </summary>
     public class CompositeMapper : IMapper
     {
         private readonly IServiceProvider _serviceProvider;
