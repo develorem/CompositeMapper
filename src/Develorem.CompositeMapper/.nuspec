@@ -8,7 +8,8 @@
     <owners>Develorem</owners>    
     <projectUrl>https://github.com/develorem/CompositeMapper</projectUrl>
     <iconUrl>http://develorem.com/images/logo-symbol.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>    
+    <license type="expression">MIT</license>
     <description>Some people argue for manual mapping logic, others prefer automappers. We say, why not both?</description>
     <releaseNotes>Maiden voyage</releaseNotes>
     <copyright>Copyright 2019 Develorem</copyright>
