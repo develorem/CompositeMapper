@@ -8,8 +8,9 @@ We say...
 
 ![Why not both?](https://media1.tenor.com/images/067bb2e4df4aaa6d8c702eb9eabb0964/tenor.gif?itemid=11478682)
 
+## What is it?
 
-CompositeMapper is a very simple framework that allows you to use an automapper (like Mapster or AutoMapper) while also providing specific hard coded mappings, facilitated by a single abstraction so that your calling code doesn't have to care.
+CompositeMapper is a very simple framework for .Net that allows you to use an automapper (like Mapster or AutoMapper) while also providing specific hard coded mappings, facilitated by a single abstraction so that your calling code doesn't have to care.
 
 ## Install
 
