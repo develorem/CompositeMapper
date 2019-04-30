@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>    
+    <id>Develorem.CompositeMapper</id>
+    <version>1.0.0</version>
+    <title>CompositeMapper - Why Not Have Both</title>
+    <authors>Develorem</authors>
+    <owners>Develorem</owners>    
+    <projectUrl>https://github.com/develorem/CompositeMapper</projectUrl>
+    <iconUrl>http://develorem.com/images/logo-symbol.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Some people argue for manual mapping logic, others prefer automappers. We say, why not both?</description>
+    <releaseNotes>Maiden voyage</releaseNotes>
+    <copyright>Copyright 2019 Develorem</copyright>
+    <tags>mapping</tags>
+    <dependencies>
+      <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.2.0"  />
+    </dependencies>
+    <summary>CompositeMapper allows both manual and auto mapping of your objects</summary>
+  </metadata>
+</package>

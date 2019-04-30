@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Develorem</Authors>
+    <Company>Develorem</Company>
+    <Description>Solving the age old developer argument of 'Manual Mapping' vs 'Auto Mapping'... why not both?</Description>
+    <PackageReleaseNotes>First. Release. Ever.</PackageReleaseNotes>
+    <Copyright>OSS - Do what you want.</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
